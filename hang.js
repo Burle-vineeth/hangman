@@ -2,7 +2,7 @@ let show = "";
 let live = 10;
 let answer;
 let singleChar;
-let requiredLength = 0;
+let requiredLength;
 let sucLength;
 let counter = 1;
 let spanEle = document.querySelectorAll('.letters span');
@@ -86,6 +86,7 @@ function play() {
     document.getElementById('show').innerHTML = displayBlank;
     console.log(answer);
     sucLength = answer.length;
+    requiredLength = 0;
     restart();
     document.getElementById('clue').innerHTML = "";
     live = 10;
