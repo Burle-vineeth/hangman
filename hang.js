@@ -105,6 +105,7 @@ function restart() {
 function hint() {
     let hintValue = hints[index][indexEle];
     document.getElementById('clue').innerHTML = "Clue:- " + hintValue;
+    let vikram = "vikram";
 }
 
 // vineeth = document.getElementById('myCanvas');
