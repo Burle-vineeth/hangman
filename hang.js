@@ -78,6 +78,7 @@ let index, indexEle;
 
 function play() {
     index = Math.floor(Math.random() * 3);
+    requiredLength = 0;
     let mul = categories[index].length;
     indexEle = Math.floor(Math.random() * mul);
     answer = categories[index][indexEle];
@@ -86,6 +87,7 @@ function play() {
     for (let i = 0; i < anslen; i++) {
         if (answer[i] == '-') {
             displayBlank = displayBlank + "<span> - </span>";
+            requiredLength++;
         } else {
             displayBlank = displayBlank + "<span> _ </span>";
         }
@@ -94,7 +96,6 @@ function play() {
     console.log(answer);
     sucLength = answer.length;
     touchedKeys = [];
-    requiredLength = 0;
     restart();
     document.getElementById('clue').innerHTML = "";
     live = 10;
